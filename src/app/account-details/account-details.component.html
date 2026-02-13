@@ -1,21 +1,13 @@
-<h3>View Account Details</h3>
-<div>
-  <div>
-    <label><b>Id:</b></label> {{ account.id }}
-  </div>
-  <div>
-    <label><b>Name:</b></label> {{ account.name }}
+<section class="content-card account-details-card">
+  <div class="section-header">
+    <h2>Account Details</h2>
   </div>
 
-  <div>
-    <label><b>Balance:</b></label> {{ account.balance }}
+  <div class="details-grid">
+    <div><span>Id</span><strong>{{ account.id }}</strong></div>
+    <div><span>Name</span><strong>{{ account.name }}</strong></div>
+    <div><span>Balance</span><strong>{{ account.balance }}</strong></div>
+    <div><span>Email</span><strong>{{ account.email }}</strong></div>
+    <div><span>Phone</span><strong>{{ account.phone }}</strong></div>
   </div>
-
-  <div>
-    <label><b>Email:</b></label> {{ account.email }}
-  </div>
-
-  <div>
-    <label><b>Phone:</b></label> {{ account.phone }}
-  </div>
-</div>
+</section>

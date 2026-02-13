@@ -1,40 +1,36 @@
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Balance</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
+<section class="content-card">
+  <div class="section-header">
+    <h2>Account List</h2>
+    <p>Manage customer accounts in a clean workspace.</p>
+  </div>
 
+  <div class="table-responsive">
+    <table class="table minimalist-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Balance</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th class="text-end">Actions</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <tr *ngFor="let acc of accounts">
-      <td>{{ acc.id }}</td>
-      <td>{{ acc.name }}</td>
-      <td>{{ acc.balance }}</td>
-      <td>{{ acc.email }}</td>
-      <td>{{ acc.phone }}</td>
-      <td>
-        <button class="btn btn-info" (click)="accountDetails(acc.id)" class="btn btn-info">
-          View
-        </button>
-      </td>
-
-      <td>
-        <button class="btn btn-info" (click)="updateAccount(acc.id)">
-          Update
-        </button>
-      </td>
-
-      <td>
-        <button (click)="deleteAccount(acc.id)" class="btn btn-danger" style="margin-left: 10px">
-          Delete
-        </button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+      <tbody>
+        <tr *ngFor="let acc of accounts">
+          <td>{{ acc.id }}</td>
+          <td>{{ acc.name }}</td>
+          <td>{{ acc.balance }}</td>
+          <td>{{ acc.email }}</td>
+          <td>{{ acc.phone }}</td>
+          <td class="text-end action-group">
+            <button class="btn btn-sm btn-outline-dark" (click)="accountDetails(acc.id)">View</button>
+            <button class="btn btn-sm btn-outline-secondary" (click)="updateAccount(acc.id)">Update</button>
+            <button (click)="deleteAccount(acc.id)" class="btn btn-sm btn-dark">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
