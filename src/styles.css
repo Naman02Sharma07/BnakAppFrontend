@@ -67,7 +67,11 @@ body {
 
 .login-container {
   max-width: 980px;
-  margin-top: 56px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-card {
@@ -155,6 +159,9 @@ body {
 
 .login-panel {
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .logo-row {
@@ -220,6 +227,11 @@ body {
 }
 
 @media (max-width: 900px) {
+  .login-container {
+    min-height: auto;
+    margin: 20px auto;
+  }
+
   .login-layout {
     grid-template-columns: 1fr;
   }
