@@ -1,47 +1,24 @@
-<div class="col-md-6 offset-md-3">
-  <h3>Transfer</h3>
+<section class="content-card form-card compact-form">
+  <div class="section-header">
+    <h2>Transfer</h2>
+  </div>
 
-
-  <form (ngSubmit)="onSubmit()">
+  <form (ngSubmit)="onSubmit()" class="minimal-form">
     <div class="form-group">
       <label>From Account Id</label>
-      <input
-        type="number"
-        class="form-control"
-        [(ngModel)]="fromAccountId"
-        name="fromAccountId"
-        required>
+      <input type="number" class="form-control" [(ngModel)]="fromAccountId" name="fromAccountId" required>
     </div>
 
     <div class="form-group">
       <label>To Account Id</label>
-      <input
-        type="number"
-        class="form-control"
-        [(ngModel)]="toAccountId"
-        name="toAccountId"
-        required>
+      <input type="number" class="form-control" [(ngModel)]="toAccountId" name="toAccountId" required>
     </div>
-
 
     <div class="form-group">
       <label>Amount</label>
-      <input
-        type="number"
-        class="form-control"
-        [(ngModel)]="amount"
-        name="amount"
-        required>
+      <input type="number" class="form-control" [(ngModel)]="amount" name="amount" required>
     </div>
 
-
-    <br>
-
-
-    <button type="submit" class="btn btn-success">
-      Submit
-    </button>
-
-
+    <button type="submit" class="btn btn-dark mt-3">Submit</button>
   </form>
-</div>
+</section>
