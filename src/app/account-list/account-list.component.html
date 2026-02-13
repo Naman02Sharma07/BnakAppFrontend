@@ -1,7 +1,9 @@
 <section class="content-card">
-  <div class="section-header">
-    <h2>Account List</h2>
-    <p>Manage customer accounts in a clean workspace.</p>
+  <div class="section-header section-header-row">
+    <div>
+      <h2>Funds and Escrow</h2>
+      <p>Track all customer account activity in one place.</p>
+    </div>
   </div>
 
   <div class="table-responsive">
@@ -9,7 +11,7 @@
       <thead>
         <tr>
           <th>Id</th>
-          <th>Name</th>
+          <th>Account</th>
           <th>Balance</th>
           <th>Email</th>
           <th>Phone</th>
@@ -21,7 +23,7 @@
         <tr *ngFor="let acc of accounts">
           <td>{{ acc.id }}</td>
           <td>{{ acc.name }}</td>
-          <td>{{ acc.balance }}</td>
+          <td>${{ acc.balance }}</td>
           <td>{{ acc.email }}</td>
           <td>{{ acc.phone }}</td>
           <td class="text-end action-group">

@@ -4,7 +4,7 @@
     <p class="muted-note">Name and balance are read-only.</p>
   </div>
 
-  <form (ngSubmit)="onSubmit()" class="minimal-form">
+  <form (ngSubmit)="onSubmit()" class="minimal-form split-form">
     <div class="form-group">
       <label>Name</label>
       <input type="text" class="form-control" [(ngModel)]="account.name" name="name" readonly>
@@ -25,6 +25,6 @@
       <input type="text" class="form-control" [(ngModel)]="account.phone" name="phone" required>
     </div>
 
-    <button type="submit" class="btn btn-dark mt-3">Submit</button>
+    <button type="submit" class="btn btn-dark mt-3">Save Changes</button>
   </form>
 </section>
