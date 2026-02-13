@@ -1,19 +1,42 @@
 <div class="app-shell" [class.login-shell]="isLoginPage">
-  <header class="top-nav" *ngIf="!isLoginPage">
-    <div class="brand">BnakApp</div>
+  <ng-container *ngIf="!isLoginPage; else loginLayout">
+    <aside class="app-sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-box">B</div>
+        <div>
+          <h1>BnakApp</h1>
+          <p>Digital Banking</p>
+        </div>
+      </div>
 
-    <nav class="top-nav-links">
-      <a routerLink="accounts" routerLinkActive="active" class="nav-link">Accounts</a>
-      <a routerLink="create-account" routerLinkActive="active" class="nav-link">Create</a>
-      <a routerLink="deposit" routerLinkActive="active" class="nav-link">Deposit</a>
-      <a routerLink="withdraw" routerLinkActive="active" class="nav-link">Withdraw</a>
-      <a routerLink="transfer" routerLinkActive="active" class="nav-link">Transfer</a>
-    </nav>
+      <nav class="sidebar-nav">
+        <a routerLink="accounts" routerLinkActive="active" class="nav-link">Accounts</a>
+        <a routerLink="create-account" routerLinkActive="active" class="nav-link">Create Account</a>
+        <a routerLink="deposit" routerLinkActive="active" class="nav-link">Deposit</a>
+        <a routerLink="withdraw" routerLinkActive="active" class="nav-link">Withdraw</a>
+        <a routerLink="transfer" routerLinkActive="active" class="nav-link">Transfer</a>
+      </nav>
 
-    <button class="btn btn-dark btn-sm" (click)="logout()">Logout</button>
-  </header>
+      <button class="btn btn-light logout-btn" (click)="logout()">Logout</button>
+    </aside>
 
-  <main class="page-container" [class.login-container]="isLoginPage">
-    <router-outlet></router-outlet>
-  </main>
+    <section class="main-area">
+      <header class="top-nav">
+        <div>
+          <p class="eyebrow">Welcome back</p>
+          <h2>Banking Workspace</h2>
+        </div>
+      </header>
+
+      <main class="page-container">
+        <router-outlet></router-outlet>
+      </main>
+    </section>
+  </ng-container>
+
+  <ng-template #loginLayout>
+    <main class="page-container login-container">
+      <router-outlet></router-outlet>
+    </main>
+  </ng-template>
 </div>

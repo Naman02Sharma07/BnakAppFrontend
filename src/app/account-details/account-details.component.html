@@ -1,12 +1,13 @@
 <section class="content-card account-details-card">
   <div class="section-header">
     <h2>Account Details</h2>
+    <p>Customer summary card.</p>
   </div>
 
   <div class="details-grid">
     <div><span>Id</span><strong>{{ account.id }}</strong></div>
     <div><span>Name</span><strong>{{ account.name }}</strong></div>
-    <div><span>Balance</span><strong>{{ account.balance }}</strong></div>
+    <div><span>Balance</span><strong>${{ account.balance }}</strong></div>
     <div><span>Email</span><strong>{{ account.email }}</strong></div>
     <div><span>Phone</span><strong>{{ account.phone }}</strong></div>
   </div>

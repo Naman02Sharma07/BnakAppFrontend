@@ -1,9 +1,10 @@
 <section class="content-card form-card">
   <div class="section-header">
     <h2>Create Account</h2>
+    <p>Register a new customer profile.</p>
   </div>
 
-  <form (ngSubmit)="onSubmit()" class="minimal-form">
+  <form (ngSubmit)="onSubmit()" class="minimal-form split-form">
     <div class="form-group">
       <label>Name</label>
       <input type="text" class="form-control" [(ngModel)]="account.name" name="name">
@@ -24,6 +25,6 @@
       <input type="text" class="form-control" [(ngModel)]="account.phone" name="phone">
     </div>
 
-    <button type="submit" class="btn btn-dark mt-3">Submit</button>
+    <button type="submit" class="btn btn-dark mt-3">Create Account</button>
   </form>
 </section>

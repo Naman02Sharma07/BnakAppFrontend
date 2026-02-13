@@ -1,16 +1,16 @@
 <section class="login-layout">
   <div class="login-panel">
     <div class="logo-row">
-      <div class="logo-box">B</div>
+      <div class="logo-box">Ar</div>
       <div>
-        <h1>BnakApp Bank</h1>
+        <h1>Argon Bank</h1>
         <p>Login to your account</p>
       </div>
     </div>
 
     <form (ngSubmit)="onSubmit()" class="minimal-form">
       <div class="form-group">
-        <label>Username</label>
+        <label>Login</label>
         <input type="text" class="form-control" [(ngModel)]="username" name="username" required>
       </div>
 
@@ -21,15 +21,15 @@
 
       <div class="text-danger small mt-2" *ngIf="error">{{ error }}</div>
 
-      <button type="submit" class="btn btn-dark w-100 mt-3">Login</button>
+      <button type="submit" class="btn login-submit w-100 mt-3">Login <span>→</span></button>
     </form>
   </div>
 
   <aside class="login-showcase">
-    <div class="card-preview">
-      <p>Available Balance</p>
+    <div class="bank-card">
+      <p>Available balance</p>
       <h3>$22,124.55</h3>
-      <small>Secure digital banking with minimal interface.</small>
+      <small>0000 0000 0000 3333</small>
     </div>
   </aside>
 </section>

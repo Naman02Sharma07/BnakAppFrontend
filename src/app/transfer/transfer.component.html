@@ -1,9 +1,10 @@
-<section class="content-card form-card compact-form">
+<section class="content-card transfer-layout">
   <div class="section-header">
-    <h2>Transfer</h2>
+    <h2>Send Money</h2>
+    <p>Transfer funds between accounts.</p>
   </div>
 
-  <form (ngSubmit)="onSubmit()" class="minimal-form">
+  <form (ngSubmit)="onSubmit()" class="minimal-form split-form">
     <div class="form-group">
       <label>From Account Id</label>
       <input type="number" class="form-control" [(ngModel)]="fromAccountId" name="fromAccountId" required>
@@ -14,11 +15,11 @@
       <input type="number" class="form-control" [(ngModel)]="toAccountId" name="toAccountId" required>
     </div>
 
-    <div class="form-group">
+    <div class="form-group full-row">
       <label>Amount</label>
       <input type="number" class="form-control" [(ngModel)]="amount" name="amount" required>
     </div>
 
-    <button type="submit" class="btn btn-dark mt-3">Submit</button>
+    <button type="submit" class="btn btn-dark mt-3">Confirm Transfer</button>
   </form>
 </section>
